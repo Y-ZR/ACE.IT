@@ -64,7 +64,6 @@ export default function LandingPage() {
       <main className="flex-1">
         <section className="flex flex-col items-center justify-center min-h-screen">
           <div className="container grid items-center gap-24 px-4 grid-cols-2">
-
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
@@ -91,7 +90,6 @@ export default function LandingPage() {
                 <span className="font-medium">Ace It</span>
               </div>
             </div>
-
             <Carousel className="rounded-xl w-[700px] h-[380px] bg-white shadow-lg relative z-0">
               <CarouselContent>
                 <CarouselItem>
@@ -209,10 +207,8 @@ export default function LandingPage() {
               <CarouselPrevious />
               <CarouselNext />
             </Carousel>
-    
           </div>
         </section>
-
         <section className="min-h-screen w-full py-12 flex justify-center items-center">
           <div className="container space-y-20 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
