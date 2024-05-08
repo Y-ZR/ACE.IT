@@ -5,11 +5,9 @@ import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, Dropdown
 import { Badge } from "@/components/ui/badge"
 import { SiStudyverse } from "react-icons/si";
 import { FaUser } from "react-icons/fa";
-import { FaAngleLeft } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
+import { Progress } from "@/components/ui/progress"
 
-
-export default function PracticePaper1() {
+export default function Analytics() {
   return (
     <div className="grid min-h-screen w-full grid-cols-[280px_1fr] bg-gray-100 dark:bg-gray-950">
       <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
@@ -73,6 +71,7 @@ export default function PracticePaper1() {
           </div>
         </div>
       </div>
+
       <div className="flex flex-col">
         <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
           <Link className="lg:hidden" href="#">
@@ -108,121 +107,107 @@ export default function PracticePaper1() {
         </header>
 
         <main className="flex-1 p-6 md:p-8">
-          <div className="">
-            <div className="flex flex-col rounded-lg border border-gray-200 shadow-md dark:border-gray-700">
-              <header className="bg-gray-300 px-6 py-4 rounded-t-lg dark:bg-gray-800 flex justify-between items-center">
-                <h2 className="text-lg font-semibold">Chemistry Practice Paper</h2>
-                <Badge className="size-xl">
-                  Iteration 1
-                </Badge>
-              </header>
-              <div className="flex-1 overflow-y-auto p-6 space-y-6">
-                <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 1</h3>
-                  <p>What is the chemical formula for water?</p>
-                  <div className="mt-2 space-x-4">
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      H2O
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      H2O2
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      OH2
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      HO2
-                    </button>
-                  </div>
+          <div className="w-full h-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+            <div className="flex flex-col items-center">
+              <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Chemistry Practice Paper</h1>
+              <Badge className="mb-4">Iteration 1</Badge>
+              <div className="flex items-center justify-between w-full mb-8">
+                <div className="flex flex-col items-start">
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">Overall Score</span>
+                  <span className="text-4xl font-bold text-primary-500">75%</span>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 2</h3>
-                  <p>What is the oxidation number of oxygen in hydrogen peroxide (H2O2)?</p>
-                  <div className="mt-2 space-x-4">
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      -1
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      -2
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      +1
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      +2
-                    </button>
+                <Button variant="primary">Review Feedback</Button>
+              </div>
+              <div className="w-full">
+                <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Performance by Topic</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">Atomic Structure</span>
+                      <span className="text-primary-500 font-bold">90%</span>
+                    </div>
+                    <Progress className="bg-primary-500" value={90} />
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 3</h3>
-                  <p>
-                    What is the balanced chemical equation for the reaction between sodium and chlorine to form sodium chloride?
-                  </p>
-                  <div className="mt-2 space-x-4">
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      2Na + Cl2 → 2NaCl
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Na + Cl → NaCl
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      2Na + 2Cl → 2NaCl
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Na + 2Cl → NaCl2
-                    </button>
+                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">Chemical Bonding</span>
+                      <span className="text-primary-500 font-bold">85%</span>
+                    </div>
+                    <Progress className="bg-primary-500" value={85} />
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 4</h3>
-                  <p>
-                    What is the chemical formula for sodium chloride?
-                  </p>
-                  <div className="mt-2 space-x-4">
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      NaCl
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      NaCl2
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Na2Cl
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Na2Cl2
-                    </button>
+                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">States of Matter</span>
+                      <span className="text-warning-500 font-bold">45%</span>
+                    </div>
+                    <Progress className="bg-warning-500" value={45} />
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 5</h3>
-                  <p>
-                    Explain how the electrolysis of water works.
-                  </p>
-                  <div className="mt-2 space-x-4">
-                    <textarea className="w-full p-2 h-24 rounded-md bg-gray-200" />
+                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">Chemical Reactions</span>
+                      <span className="text-danger-500 font-bold">50%</span>
+                    </div>
+                    <Progress className="bg-danger-500" value={50} />
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 6</h3>
-                  <p>
-                    Explain the process of neutralization between an acid and a base.
-                  </p>
-                  <div className="mt-2 space-x-4">
-                    <textarea className="w-full p-2 h-24 rounded-md bg-gray-200" />
+                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">Acids and Bases</span>
+                      <span className="text-primary-500 font-bold">30%</span>
+                    </div>
+                    <Progress className="bg-primary-500" value={30} />
+                  </div>
+                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">Chemical Equilibria</span>
+                      <span className="text-primary-500 font-bold">85%</span>
+                    </div>
+                    <Progress className="bg-primary-500" value={85} />
                   </div>
                 </div>
               </div>
-              <footer className="bg-gray-100 px-6 py-4 rounded-b-lg flex justify-between items-center dark:bg-gray-800">
-                <Button className="px-4 py-2 rounded-md text-white">
-                  <FaAngleLeft className="h-4 w-4" />
-                </Button>
-                <span className="text-sm ">Page 1 of 10</span>
-                <Link href="/analytics">
-                  <Button className="px-4 py-2 rounded-md text-white">
-                    <FaAngleRight className="h-4 w-4" />
-                  </Button>
+              <div className="w-full mt-8">
+                <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Focus Areas</h2>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <CheckIcon className="w-5 h-5 mr-2 text-green-500" />
+                    <span className="text-gray-900 dark:text-gray-100">Atomic Structure</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckIcon className="w-5 h-5 mr-2 text-green-500" />
+                    <span className="text-gray-900 dark:text-gray-100">Chemical Bonding</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckIcon className="w-5 h-5 mr-2 text-green-500" />
+                    <span className="text-gray-900 dark:text-gray-100">Chemical Equilibra</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="w-full mt-8">
+                <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Areas For Improvement</h2>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <XIcon className="w-5 h-5 mr-2 text-red-500" />
+                    <span className="text-gray-900 dark:text-gray-100">States of Matter</span>
+                  </li>
+                  <li className="flex items-center">
+                    <XIcon className="w-5 h-5 mr-2 text-red-500" />
+                    <span className="text-gray-900 dark:text-gray-100">Chemical Reactions</span>
+                  </li>
+                  <li className="flex items-center">
+                    <XIcon className="w-5 h-5 mr-2 text-red-500" />
+                    <span className="text-gray-900 dark:text-gray-100">Acids and Bases</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="w-full flex justify-between items-center">
+                <Link href="/dashboard">
+                  <Button className="mt-8"><HomeIcon className="w-5 h-5 mr-2" /> Back to Dashboard</Button>
                 </Link>
-              </footer>
+                <Link href="/practice-paper2">
+                  <Button className="mt-8">Generate New Paper</Button>
+                </Link>
+              </div>
             </div>
           </div>
         </main>
@@ -363,6 +348,47 @@ function TrophyIcon(props) {
       <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
       <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
       <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+    </svg>
+  )
+}
+
+
+function CheckIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  )
+}
+
+
+function XIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 6L6 18" />
+      <path d="M6 6l12 12" />
     </svg>
   )
 }
