@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 
-export default function ProficiencyFormPage() {
+export default function ProficiencyForm() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showStatusBar, setShowStatusBar] = React.useState(true)
   const [showActivityBar, setShowActivityBar] = React.useState(false)

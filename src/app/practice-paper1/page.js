@@ -2,17 +2,18 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
-import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
 import { SiStudyverse } from "react-icons/si";
 import { FaUser } from "react-icons/fa";
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 
 
-export default function Dashboard() {
+export default function PracticePaper1() {
   return (
     <div className="grid min-h-screen w-full grid-cols-[280px_1fr] bg-gray-100 dark:bg-gray-950">
       <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
-        <div className="flex h-full max-h-screen flex-col gap-2">
+        <div className="flex h-full flex-col gap-2">
           <div className="flex h-[60px] items-center border-b px-6">
             <Link className="flex items-center justify-center" href="/">
               <SiStudyverse className="w-5 h-5" />
@@ -57,7 +58,7 @@ export default function Dashboard() {
               </Link>
             </nav>
           </div>
-          <div className="mt-auto p-4">
+          <div className="mt-auto p-4 sticky bottom-0">
             <Card>
               <CardHeader className="pb-4">
                 <CardTitle>Upgrade to Pro</CardTitle>
@@ -79,7 +80,7 @@ export default function Dashboard() {
             <span className="sr-only">Home</span>
           </Link>
           <div className="w-full flex-1">
-            <h1 className="text-lg font-semibold">Dashboard</h1>
+            <h1 className="text-lg font-semibold">O Level's Chemistry</h1>
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -105,79 +106,124 @@ export default function Dashboard() {
             </DropdownMenuContent>
           </DropdownMenu>
         </header>
-        <main className="flex-1 p-6 md:p-8">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="h-full hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <CardTitle>Chemistry Practice</CardTitle>
-                <CardDescription>
-                  Improve your chemistry skills with our comprehensive practice questions.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-col gap-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium">Current Iteration: 0 / 5</div>
-                    <Progress value={0} />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium">Highest Score: N/A</div>
-                    <Badge>
-                      Start Practicing!
-                    </Badge>
-                  </div>
-                  <Link
-                    className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                    href="/practice-paper1"
-                  >
-                    Start Practice
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="h-full hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <CardTitle>Mathematics Practice</CardTitle>
-                <CardDescription>Sharpen your mathematic skills with our extensive practice questions.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-col gap-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium">Current Iteration: 0 / 5</div>
-                    <Progress value={0} />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium">Highest Score: N/A</div>
-                    <Badge>
-                      Start Practicing!
-                    </Badge>
-                  </div>
-                  <Link
-                    className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                    href="#"
-                  >
-                    Start Practice
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
 
-            <Card className="h-full flex items-center justify-center hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-12 w-12 text-gray-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 3a1 1 0 00-1 1v5H4a1 1 0 100 2h5v5a1 1 0 102 0v-5h5a1 1 0 100-2h-5V4a1 1 0 00-1-1z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+        <main className="flex-1 p-6 md:p-8">
+          <div className="">
+            <div className="flex flex-col rounded-lg border border-gray-200 shadow-md dark:border-gray-700">
+              <header className="bg-gray-300 px-6 py-4 rounded-t-lg dark:bg-gray-800 flex justify-between items-center">
+                <h2 className="text-lg font-semibold">Chemistry Practice Paper</h2>
+                <Badge className="size-xl">
+                  Iteration 1
+                </Badge>
+              </header>
+              <div className="flex-1 overflow-y-auto p-6 space-y-6">
+                <div>
+                  <h3 className="text-lg font-medium mb-2 underline">Question 1</h3>
+                  <p>What is the chemical formula for water?</p>
+                  <div className="mt-2 space-x-4">
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      H2O
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      H2O2
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      OH2
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      HO2
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium mb-2 underline">Question 2</h3>
+                  <p>What is the oxidation number of oxygen in hydrogen peroxide (H2O2)?</p>
+                  <div className="mt-2 space-x-4">
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      -1
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      -2
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      +1
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      +2
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium mb-2 underline">Question 3</h3>
+                  <p>
+                    What is the balanced chemical equation for the reaction between sodium and chlorine to form sodium chloride?
+                  </p>
+                  <div className="mt-2 space-x-4">
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      2Na + Cl2 → 2NaCl
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      Na + Cl → NaCl
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      2Na + 2Cl → 2NaCl
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      Na + 2Cl → NaCl2
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium mb-2 underline">Question 4</h3>
+                  <p>
+                    What is the chemical formula for sodium chloride?
+                  </p>
+                  <div className="mt-2 space-x-4">
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      NaCl
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      NaCl2
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      Na2Cl
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      Na2Cl2
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium mb-2 underline">Question 5</h3>
+                  <p>
+                    Explain how the electrolysis of water works.
+                  </p>
+                  <div className="mt-2 space-x-4">
+                    <textarea className="w-full p-2 h-24 rounded-md bg-gray-200" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium mb-2 underline">Question 6</h3>
+                  <p>
+                    Explain the process of neutralization between an acid and a base.
+                  </p>
+                  <div className="mt-2 space-x-4">
+                    <textarea className="w-full p-2 h-24 rounded-md bg-gray-200" />
+                  </div>
+                </div>
               </div>
-            </Card>
+              <footer className="bg-gray-100 px-6 py-4 rounded-b-lg flex justify-between items-center dark:bg-gray-800">
+                <Button className="px-4 py-2 rounded-md text-white">
+                  <FaAngleLeft className="h-4 w-4" />
+                </Button>
+                <span className="text-sm ">Page 1 of 10</span>
+                <Link href="/analytics">
+                  <Button className="px-4 py-2 rounded-md text-white">
+                    <FaAngleRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </footer>
+            </div>
           </div>
         </main>
       </div>
