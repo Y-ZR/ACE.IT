@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
 
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -34,6 +35,7 @@ export default function LandingPage() {
     };
   }, []);
 
+  
   return (
     <div className="flex flex-col min-h-[100dvh] bg-[#f4f4eb] relative">
       <header className={`fixed top-0 left-0 right-0 flex items-center p-4 border-b transition-all duration-300 z-10 ${isScrolled ? "backdrop-blur-md bg-opacity-30" : "bg-opacity-100"}`}>
@@ -315,6 +317,7 @@ export default function LandingPage() {
     </div>
   )
 }
+
 
 function CompassIcon(props) {
   return (
