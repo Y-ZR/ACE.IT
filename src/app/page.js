@@ -12,12 +12,31 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { useEffect, useState } from "react";
 
 
 export default function Component() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col min-h-[100dvh] bg-[#f4f4eb] relative">
-      <header className="fixed top-0 left-0 right-0 flex items-center p-4 border-b">
+      <header className={`fixed top-0 left-0 right-0 flex items-center p-4 border-b transition-all duration-300 z-10 ${isScrolled ? "backdrop-blur-md bg-opacity-30" : "bg-opacity-100"}`}>
         <Link className="flex items-center justify-center" href="/">
           <SiStudyverse className="w-5 h-5" />
           <span className="text-lg font-extrabold text-black ml-1">
@@ -29,7 +48,7 @@ export default function Component() {
             Demo
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Pricing
+            Features
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
             About
@@ -71,7 +90,7 @@ export default function Component() {
               </div>
             </div>
 
-            <Carousel className="rounded-xl w-[700px] h-[380px] bg-white shadow-lg">
+            <Carousel className="rounded-xl w-[700px] h-[380px] bg-white shadow-lg relative z-0">
               <CarouselContent>
                 <CarouselItem>
                   <header className="bg-black px-6 py-4 rounded-t-lg text-left text-white">
@@ -184,8 +203,6 @@ export default function Component() {
                     </div>
                   </div>  
                 </CarouselItem>
-
-
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
