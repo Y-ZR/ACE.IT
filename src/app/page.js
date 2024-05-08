@@ -15,7 +15,7 @@ import {
 import { useEffect, useState } from "react";
 
 
-export default function Component() {
+export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function Component() {
           </span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/demo">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/proficiency-form">
             Demo
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
@@ -73,7 +73,7 @@ export default function Component() {
                   optimize your learning experience.
                 </p>
               </div>
-              <Link className="inline-flex h-11 items-center justify-center" href="/demo">
+              <Link className="inline-flex h-11 items-center justify-center" href="/proficiency-form">
                 <Button className="w-full shadow-lg">
                   Try Demo
                 </Button>
