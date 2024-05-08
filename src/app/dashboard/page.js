@@ -60,7 +60,7 @@ export default function Component() {
             <Card>
               <CardHeader className="pb-4">
                 <CardTitle>Upgrade to Pro</CardTitle>
-                <CardDescription>Unlock all features and get unlimited access to our support team</CardDescription>
+                <CardDescription>Unlock all features and get unlimited iterations for each subject, and many more!</CardDescription>
               </CardHeader>
               <CardContent>
                 <Button className="w-full" size="sm">
