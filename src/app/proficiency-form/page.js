@@ -11,7 +11,6 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
-import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -20,7 +19,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-
 
 
 export default function ProficiencyFormPage() {
@@ -46,6 +44,7 @@ export default function ProficiencyFormPage() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
 
   return (
     <div className="flex flex-col min-h-[100dvh] bg-[#f4f4eb] relative">
@@ -74,7 +73,6 @@ export default function ProficiencyFormPage() {
 
       <main className="flex-1">
         <section className="flex flex-col items-center justify-center min-h-screen">
-
           <Card className="p-8 space-y-4 w-[40%] ">
             <div className="space-y-2 text-center">
               <h1 className="text-3xl font-bold">Preliminary Proficiency Form</h1>
@@ -163,7 +161,6 @@ export default function ProficiencyFormPage() {
                 </div>
             </form>
           </Card>
-
         </section>
       </main>
 
