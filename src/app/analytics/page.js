@@ -79,7 +79,7 @@ export default function Analytics() {
             <span className="sr-only">Home</span>
           </Link>
           <div className="w-full flex-1">
-            <h1 className="text-lg font-semibold">O Level's Chemistry</h1>
+            <h1 className="text-lg font-semibold">O Level&apos;s Chemistry</h1>
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
