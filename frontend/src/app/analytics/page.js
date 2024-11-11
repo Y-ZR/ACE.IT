@@ -10,13 +10,16 @@ import { Progress } from "@/components/ui/progress"
 export default function Analytics() {
   return (
     <div className="grid min-h-screen w-full grid-cols-[280px_1fr] bg-gray-100 dark:bg-gray-950">
+      {/* Sidebar */}
       <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
         <div className="flex h-full flex-col gap-2">
+          {/* Sidebar Header */}
           <div className="flex h-[60px] items-center border-b px-6">
             <Link className="flex items-center justify-center" href="/">
               <SiStudyverse className="w-5 h-5" />
               <span className="text-lg font-extrabold text-black ml-1">
-                <span className="text-[#a28231]">A</span>CE.<span className="text-[#a28231]">I</span>T
+                <span className="text-[#a28231]">A</span>CE.
+                <span className="text-[#a28231]">I</span>T
               </span>
             </Link>
             <Button className="ml-auto h-8 w-8" size="icon" variant="outline">
@@ -24,6 +27,8 @@ export default function Analytics() {
               <span className="sr-only">Toggle notifications</span>
             </Button>
           </div>
+
+          {/* Sidebar Navigation */}
           <div className="flex-1 overflow-auto py-2">
             <nav className="grid items-start px-4 text-sm font-medium">
               <Link
@@ -56,11 +61,16 @@ export default function Analytics() {
               </Link>
             </nav>
           </div>
+
+          {/* Sidebar Footer */}
           <div className="mt-auto p-4 sticky bottom-0">
             <Card>
               <CardHeader className="pb-4">
                 <CardTitle>Upgrade to Pro</CardTitle>
-                <CardDescription>Unlock all features and get unlimited iterations for each subject, and many more!</CardDescription>
+                <CardDescription>
+                  Unlock all features and get unlimited iterations for each
+                  subject, and many more!
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button className="w-full" size="sm">
@@ -72,14 +82,12 @@ export default function Analytics() {
         </div>
       </div>
 
+      {/* Main Content Area */}
       <div className="flex flex-col">
+        {/* Header */}
         <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
-          <Link className="lg:hidden" href="#">
-            <BookIcon className="h-6 w-6" />
-            <span className="sr-only">Home</span>
-          </Link>
           <div className="w-full flex-1">
-            <h1 className="text-lg font-semibold">O Level&apos;s Chemistry</h1>
+            <h1 className="text-lg font-semibold">Quantitative Reasoning</h1>
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -88,10 +96,7 @@ export default function Analytics() {
                 size="icon"
                 variant="ghost"
               >
-                <FaUser
-                  height="40"
-                  width="40"
-                />
+                <FaUser height="40" width="40" />
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>
@@ -106,103 +111,133 @@ export default function Analytics() {
           </DropdownMenu>
         </header>
 
+        {/* Main Content */}
         <main className="flex-1 p-6 md:p-8">
           <div className="w-full h-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
             <div className="flex flex-col items-center">
-              <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Chemistry Practice Paper</h1>
+              <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                Quantitative Reasoning Practice Paper
+              </h1>
               <Badge className="mb-4">Iteration 1</Badge>
               <div className="flex items-center justify-between w-full mb-8">
                 <div className="flex flex-col items-start">
-                  <span className="text-gray-500 dark:text-gray-400 text-sm">Overall Score</span>
-                  <span className="text-4xl font-bold text-primary-500">75%</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">
+                    Overall Score
+                  </span>
+                  <span className="text-4xl font-bold text-primary-500">
+                    76%
+                  </span>
                 </div>
                 <Button variant="primary">Review Feedback</Button>
               </div>
               <div className="w-full">
-                <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Performance by Topic</h2>
+                <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                  Performance by Topic
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Performance Topic 1 */}
                   <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-900 dark:text-gray-100 font-medium">Atomic Structure</span>
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">
+                        Word Problems
+                      </span>
                       <span className="text-primary-500 font-bold">90%</span>
                     </div>
                     <Progress className="bg-primary-500" value={90} />
                   </div>
+                  {/* Performance Topic 2 */}
                   <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-900 dark:text-gray-100 font-medium">Chemical Bonding</span>
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">
+                        Combinatorics; Permutation and Combination
+                      </span>
                       <span className="text-primary-500 font-bold">85%</span>
                     </div>
                     <Progress className="bg-primary-500" value={85} />
                   </div>
+                  {/* Performance Topic 3 */}
                   <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-900 dark:text-gray-100 font-medium">States of Matter</span>
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">
+                        Number Properties
+                      </span>
                       <span className="text-warning-500 font-bold">45%</span>
                     </div>
                     <Progress className="bg-warning-500" value={45} />
                   </div>
+                  {/* Performance Topic 4 */}
                   <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-900 dark:text-gray-100 font-medium">Chemical Reactions</span>
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">
+                        Geometry
+                      </span>
                       <span className="text-danger-500 font-bold">50%</span>
                     </div>
                     <Progress className="bg-danger-500" value={50} />
                   </div>
+                  {/* Performance Topic 5 */}
                   <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-900 dark:text-gray-100 font-medium">Acids and Bases</span>
+                      <span className="text-gray-900 dark:text-gray-100 font-medium">
+                        Statistics
+                      </span>
                       <span className="text-primary-500 font-bold">30%</span>
                     </div>
                     <Progress className="bg-primary-500" value={30} />
                   </div>
-                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-900 dark:text-gray-100 font-medium">Chemical Equilibria</span>
-                      <span className="text-primary-500 font-bold">85%</span>
-                    </div>
-                    <Progress className="bg-primary-500" value={85} />
-                  </div>
                 </div>
               </div>
               <div className="w-full mt-8">
-                <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Focus Areas</h2>
+                <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                  Focus Areas
+                </h2>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <CheckIcon className="w-5 h-5 mr-2 text-green-500" />
-                    <span className="text-gray-900 dark:text-gray-100">Atomic Structure</span>
+                    <span className="text-gray-900 dark:text-gray-100">
+                      Word Problems
+                    </span>
                   </li>
                   <li className="flex items-center">
                     <CheckIcon className="w-5 h-5 mr-2 text-green-500" />
-                    <span className="text-gray-900 dark:text-gray-100">Chemical Bonding</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckIcon className="w-5 h-5 mr-2 text-green-500" />
-                    <span className="text-gray-900 dark:text-gray-100">Chemical Equilibra</span>
+                    <span className="text-gray-900 dark:text-gray-100">
+                      Combinatorics; Permutation and Combination
+                    </span>
                   </li>
                 </ul>
               </div>
               <div className="w-full mt-8">
-                <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">Areas For Improvement</h2>
+                <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                  Areas For Improvement
+                </h2>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <XIcon className="w-5 h-5 mr-2 text-red-500" />
-                    <span className="text-gray-900 dark:text-gray-100">States of Matter</span>
+                    <span className="text-gray-900 dark:text-gray-100">
+                      Number Properties
+                    </span>
                   </li>
                   <li className="flex items-center">
                     <XIcon className="w-5 h-5 mr-2 text-red-500" />
-                    <span className="text-gray-900 dark:text-gray-100">Chemical Reactions</span>
+                    <span className="text-gray-900 dark:text-gray-100">
+                      Geometry
+                    </span>
                   </li>
                   <li className="flex items-center">
                     <XIcon className="w-5 h-5 mr-2 text-red-500" />
-                    <span className="text-gray-900 dark:text-gray-100">Acids and Bases</span>
+                    <span className="text-gray-900 dark:text-gray-100">
+                      Statistics
+                    </span>
                   </li>
                 </ul>
               </div>
 
+              {/* Navigation Buttons */}
               <div className="w-full flex justify-between items-center">
                 <Link href="/dashboard">
-                  <Button className="mt-8"><HomeIcon className="w-5 h-5 mr-2" /> Back to Dashboard</Button>
+                  <Button className="mt-8">
+                    <HomeIcon className="w-5 h-5 mr-2" /> Back to Dashboard
+                  </Button>
                 </Link>
                 <Link href="/practice-paper2">
                   <Button className="mt-8">Generate New Paper</Button>
@@ -213,9 +248,10 @@ export default function Analytics() {
         </main>
       </div>
     </div>
-  )
+  );
 }
 
+// Icon components
 function BellIcon(props) {
   return (
     <svg
@@ -236,7 +272,6 @@ function BellIcon(props) {
   )
 }
 
-
 function BookIcon(props) {
   return (
     <svg
@@ -255,7 +290,6 @@ function BookIcon(props) {
     </svg>
   )
 }
-
 
 function CalculatorIcon(props) {
   return (
@@ -285,7 +319,6 @@ function CalculatorIcon(props) {
   )
 }
 
-
 function HomeIcon(props) {
   return (
     <svg
@@ -306,7 +339,6 @@ function HomeIcon(props) {
   )
 }
 
-
 function SettingsIcon(props) {
   return (
     <svg
@@ -326,7 +358,6 @@ function SettingsIcon(props) {
     </svg>
   )
 }
-
 
 function TrophyIcon(props) {
   return (
@@ -352,7 +383,6 @@ function TrophyIcon(props) {
   )
 }
 
-
 function CheckIcon(props) {
   return (
     <svg
@@ -371,7 +401,6 @@ function CheckIcon(props) {
     </svg>
   )
 }
-
 
 function XIcon(props) {
   return (

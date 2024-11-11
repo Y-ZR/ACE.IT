@@ -8,7 +8,6 @@ import { FaUser } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 
-// Main component for the Practice Paper page
 export default function PracticePaper1() {
   return (
     <div className="grid min-h-screen w-full grid-cols-[280px_1fr] bg-gray-100 dark:bg-gray-950">
@@ -120,7 +119,7 @@ export default function PracticePaper1() {
               {/* Practice Paper Header */}
               <header className="bg-gray-300 px-6 py-4 rounded-t-lg dark:bg-gray-800 flex justify-between items-center">
                 <h2 className="text-lg font-semibold">
-                  Quantitative Reasoning - Problem Solving
+                  Quantitative Reasoning Practice Paper
                 </h2>
                 <Badge className="size-xl">Iteration 1</Badge>
               </header>
@@ -166,7 +165,8 @@ export default function PracticePaper1() {
                   <p>
                     The population of City X increased from 2 million in the
                     year 2000 to 2.5 million in 2015 and the gross domestic
-                    product of the city in 2000 was <sup>3</sup>&frasl;<sub>8</sub> less than that in 2015. What was the
+                    product of the city in 2000 was <sup>3</sup>&frasl;
+                    <sub>8</sub> less than that in 2015. What was the
                     approximate percent change, rounded to the nearest integer
                     if required, in the per capita gross domestic product of the
                     city from 2000 to 2015?
@@ -226,9 +226,9 @@ export default function PracticePaper1() {
                   </h3>
                   <p>
                     Company X sold 1,500 units of its product for $9 each and
-                    750 units for $6 each. If the company&apos;s cost of producing
-                    each unit of the product was $7, what was the company&apos;s
-                    profit or loss on the sale of 2,250 units?
+                    750 units for $6 each. If the company&apos;s cost of
+                    producing each unit of the product was $7, what was the
+                    company&apos;s profit or loss on the sale of 2,250 units?
                   </p>
                   <div className="mt-2 space-x-4">
                     <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">

@@ -8,7 +8,6 @@ import { FaUser } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 
-// Main component for the Practice Paper page
 export default function PracticePaper2() {
   return (
     <div className="grid min-h-screen w-full grid-cols-[280px_1fr] bg-gray-100 dark:bg-gray-950">
@@ -87,10 +86,6 @@ export default function PracticePaper2() {
       <div className="flex flex-col">
         {/* Header */}
         <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
-          <Link className="lg:hidden" href="#">
-            <BookIcon className="h-6 w-6" />
-            <span className="sr-only">Home</span>
-          </Link>
           <div className="w-full flex-1">
             <h1 className="text-lg font-semibold">Quantitative Reasoning</h1>
           </div>
@@ -123,7 +118,7 @@ export default function PracticePaper2() {
               {/* Practice Paper Header */}
               <header className="bg-gray-300 px-6 py-4 rounded-t-lg dark:bg-gray-800 flex justify-between items-center">
                 <h2 className="text-lg font-semibold">
-                  Quantitative Reasoning - Problem Solving
+                  Quantitative Reasoning Practice Paper
                 </h2>
                 <Badge className="size-xl">Iteration 2</Badge>
               </header>
