@@ -40,18 +40,18 @@ export default function PracticePaper2() {
                 Dashboard
               </Link>
               <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-900 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 href="#"
               >
-                <BookIcon className="h-4 w-4" />
-                Chemistry
+                <CalculatorIcon className="h-4 w-4" />
+                Quantiative Reasoning
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 href="#"
               >
-                <CalculatorIcon className="h-4 w-4" />
-                Mathematics
+                <BookIcon className="h-4 w-4" />
+                Verbal Reasoning
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"

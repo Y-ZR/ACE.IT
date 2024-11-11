@@ -102,7 +102,7 @@ export default function LandingPage() {
                     </span>
                     <p className="font-semibold text-2xl flex items-center">
                       Company X sold 1,500 units of its product for $9 each and 750 units for $6 each. 
-                      If the company's cost of producing each unit of the product was $7, what was the company's profit or loss on the sale of 2,250 units?
+                      If the company&apos;s cost of producing each unit of the product was $7, what was the company&apos;s profit or loss on the sale of 2,250 units?
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                       <Button className="px-4 py-2 rounded-md">
@@ -165,12 +165,12 @@ export default function LandingPage() {
                       Sentence Correction
                     </span>
                     <p className="font-semibold text-2xl flex items-start">
-                      It was found that camels, in contrast to horses', are not easily spooked by gunfire or shell detonations which,
+                      It was found that camels, in contrast to horses&apos;, are not easily spooked by gunfire or shell detonations which,
                       together with their hardiness, made them ideal for desert warfare.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                       <Button className="px-4 py-2 rounded-md">
-                        in contrast to horses',
+                        in contrast to horses&apos;,
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
                         unlike horses,

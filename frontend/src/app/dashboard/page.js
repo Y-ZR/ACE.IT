@@ -17,7 +17,8 @@ export default function Dashboard() {
             <Link className="flex items-center justify-center" href="/">
               <SiStudyverse className="w-5 h-5" />
               <span className="text-lg font-extrabold text-black ml-1">
-                <span className="text-[#a28231]">A</span>CE.<span className="text-[#a28231]">I</span>T
+                <span className="text-[#a28231]">A</span>CE.
+                <span className="text-[#a28231]">I</span>T
               </span>
             </Link>
             <Button className="ml-auto h-8 w-8" size="icon" variant="outline">
@@ -38,14 +39,14 @@ export default function Dashboard() {
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 href="#"
               >
-                <BookIcon className="h-4 w-4" />
+                <CalculatorIcon className="h-4 w-4" />  
                 Quantiative Reasoning
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 href="#"
               >
-                <CalculatorIcon className="h-4 w-4" />
+                <BookIcon className="h-4 w-4" />
                 Verbal Reasoning
               </Link>
               <Link
@@ -61,7 +62,10 @@ export default function Dashboard() {
             <Card>
               <CardHeader className="pb-4">
                 <CardTitle>Upgrade to Pro</CardTitle>
-                <CardDescription>Unlock all features and get unlimited iterations for each subject, and many more!</CardDescription>
+                <CardDescription>
+                  Unlock all features and get unlimited iterations for each
+                  subject, and many more!
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button className="w-full" size="sm">
@@ -88,10 +92,7 @@ export default function Dashboard() {
                 size="icon"
                 variant="ghost"
               >
-                <FaUser
-                  height="40"
-                  width="40"
-                />
+                <FaUser height="40" width="40" />
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>
@@ -111,20 +112,23 @@ export default function Dashboard() {
               <CardHeader>
                 <CardTitle>Quantitative Reasoning Practice</CardTitle>
                 <CardDescription>
-                  Improve your Quantiative Reasoning skills with our comprehensive practice questions.
+                  Improve your Quantiative Reasoning skills with our
+                  comprehensive practice questions.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium">Current Iteration: 0 / 5</div>
+                    <div className="text-sm font-medium">
+                      Current Iteration: 0 / 5
+                    </div>
                     <Progress value={0} />
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium">Highest Score: N/A</div>
-                    <Badge>
-                      Start Practicing!
-                    </Badge>
+                    <div className="text-sm font-medium">
+                      Highest Score: N/A
+                    </div>
+                    <Badge>Start Practicing!</Badge>
                   </div>
                   <Link
                     className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
@@ -138,19 +142,24 @@ export default function Dashboard() {
             <Card className="h-full hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <CardTitle> Verbal Reasoning Practice</CardTitle>
-                <CardDescription>Sharpen your Verbal Reasoning skills with our extensive practice questions.</CardDescription>
+                <CardDescription>
+                  Sharpen your Verbal Reasoning skills with our extensive
+                  practice questions.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium">Current Iteration: 0 / 5</div>
+                    <div className="text-sm font-medium">
+                      Current Iteration: 0 / 5
+                    </div>
                     <Progress value={0} />
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium">Highest Score: N/A</div>
-                    <Badge>
-                      Start Practicing!
-                    </Badge>
+                    <div className="text-sm font-medium">
+                      Highest Score: N/A
+                    </div>
+                    <Badge>Start Practicing!</Badge>
                   </div>
                   <Link
                     className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
@@ -182,7 +191,7 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }
 
 function BellIcon(props) {
