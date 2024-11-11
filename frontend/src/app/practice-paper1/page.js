@@ -166,8 +166,7 @@ export default function PracticePaper1() {
                   <p>
                     The population of City X increased from 2 million in the
                     year 2000 to 2.5 million in 2015 and the gross domestic
-                    product of the city in 2000 was <sup>3</sup>&frasl;
-                    <sub>8</sub> less than that in 2015. What was the
+                    product of the city in 2000 was <sup>3</sup>&frasl;<sub>8</sub> less than that in 2015. What was the
                     approximate percent change, rounded to the nearest integer
                     if required, in the per capita gross domestic product of the
                     city from 2000 to 2015?
@@ -227,8 +226,8 @@ export default function PracticePaper1() {
                   </h3>
                   <p>
                     Company X sold 1,500 units of its product for $9 each and
-                    750 units for $6 each. If the company's cost of producing
-                    each unit of the product was $7, what was the company's
+                    750 units for $6 each. If the company&apos;s cost of producing
+                    each unit of the product was $7, what was the company&apos;s
                     profit or loss on the sale of 2,250 units?
                   </p>
                   <div className="mt-2 space-x-4">
