@@ -90,31 +90,35 @@ export default function LandingPage() {
                 <span className="font-medium">Ace It</span>
               </div>
             </div>
-            <Carousel className="rounded-xl w-[700px] h-[380px] bg-white shadow-lg relative z-0">
+            <Carousel className="rounded-xl w-[700px] h-[500px] bg-white shadow-lg relative z-0">
               <CarouselContent>
                 <CarouselItem>
                   <header className="bg-black px-6 py-4 rounded-t-lg text-left text-white">
-                    <h2 className="text-lg font-semibold">O-Level Chemistry Practice Questions</h2>
+                    <h2 className="text-lg font-semibold">GMAT Quantitative Reasoning Practice Questions</h2>
                   </header>
                   <div className="p-5 space-y-10 text-left">
                     <span className="font-bold text-2xl underline">
-                      Inorganic Chemistry
+                      Problem Solving
                     </span>
                     <p className="font-semibold text-2xl flex items-center">
-                      What is the balanced chemical equation for the reaction between sodium and chlorine to form sodium chloride?
+                      Company X sold 1,500 units of its product for $9 each and 750 units for $6 each. 
+                      If the company's cost of producing each unit of the product was $7, what was the company's profit or loss on the sale of 2,250 units?
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                       <Button className="px-4 py-2 rounded-md">
-                        2Na + Cl2 → 2NaCl
+                        $2250 loss
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        Na + Cl → NaCl
+                        $750 loss
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        2Na + 2Cl → 2NaCl
+                        No profit or loss
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        Na + 2Cl → NaCl2
+                        $2250 profit
+                      </Button>
+                      <Button className="px-4 py-2 rounded-md">
+                        $18000 profit
                       </Button>
                     </div>
                   </div>  
@@ -122,27 +126,31 @@ export default function LandingPage() {
 
                 <CarouselItem>
                   <header className="bg-black px-6 py-4 rounded-t-lg text-left text-white">
-                    <h2 className="text-lg font-semibold">O-Level Chemistry Practice Questions</h2>
+                    <h2 className="text-lg font-semibold">GMAT Quantitative Reasoning Practice Questions</h2>
                   </header>
                   <div className="p-5 space-y-10 text-left">
                     <span className="font-bold text-2xl underline">
-                      Organic Chemistry
+                      Problem Solving
                     </span>
                     <p className="font-semibold text-2xl flex items-start">
-                      What is the product formed when ethene (C2H4) reacts with water in the presence of an acid catalyst?
+                      A box contains 20 balls, of which 12 are red and 8 are blue. If two balls are to be drawn from this box at random without replacement,
+                      what is the probability that one ball will be red and the other will be blue?
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                       <Button className="px-4 py-2 rounded-md">
-                        Ethanol
+                        1/96
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        Ethanal
+                        6/25
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        Ethanoic acid
+                        24/95
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        Ethene oxide
+                        48/95
+                      </Button>
+                      <Button className="px-4 py-2 rounded-md">
+                        1
                       </Button>
                     </div>
                   </div>  
@@ -150,55 +158,31 @@ export default function LandingPage() {
 
                 <CarouselItem>
                   <header className="bg-black px-6 py-4 rounded-t-lg text-left text-white">
-                    <h2 className="text-lg font-semibold">O-Level Mathematics Practice Questions</h2>
+                    <h2 className="text-lg font-semibold">GMAT Verbal Reasoning Practice Questions</h2>
                   </header>
                   <div className="p-5 space-y-10 text-left">
                     <span className="font-bold text-2xl underline">
-                      Arithmetic Progression / Geometric Progression
+                      Sentence Correction
                     </span>
                     <p className="font-semibold text-2xl flex items-start">
-                      A geometric progression consists of 5 terms. If third term is 24 and fifth term is 192, find sum of the series.
+                      It was found that camels, in contrast to horses', are not easily spooked by gunfire or shell detonations which,
+                      together with their hardiness, made them ideal for desert warfare.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                       <Button className="px-4 py-2 rounded-md">
-                        480
+                        in contrast to horses',
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        240
+                        unlike horses,
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        120
+                        as contrasted with horses,
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        60
-                      </Button>
-                    </div>
-                  </div>  
-                </CarouselItem>
-
-                <CarouselItem>
-                  <header className="bg-black px-6 py-4 rounded-t-lg text-left text-white">
-                    <h2 className="text-lg font-semibold">O-Level Mathematics Practice Questions</h2>
-                  </header>
-                  <div className="p-5 space-y-10 text-left">
-                    <span className="font-bold text-2xl underline">
-                      Geometry
-                    </span>
-                    <p className="font-semibold text-2xl flex items-start">
-                      PQRS is a parallelogram. If the length of PQ is 5 cm and the length of PS is 3 cm, find the area of it.
-                    </p>
-                    <div className="grid grid-cols-2 gap-4">
-                      <Button className="px-4 py-2 rounded-md">
-                        15 cm²
+                        unlike in case of horses
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
-                        20 cm²
-                      </Button>
-                      <Button className="px-4 py-2 rounded-md">
-                        19 cm²
-                      </Button>
-                      <Button className="px-4 py-2 rounded-md">
-                        23 cm²
+                        opposed to horses,
                       </Button>
                     </div>
                   </div>  

@@ -39,14 +39,14 @@ export default function Dashboard() {
                 href="#"
               >
                 <BookIcon className="h-4 w-4" />
-                Chemistry
+                Quantiative Reasoning
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                 href="#"
               >
                 <CalculatorIcon className="h-4 w-4" />
-                Mathematics
+                Verbal Reasoning
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
@@ -109,9 +109,9 @@ export default function Dashboard() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Card className="h-full hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <CardTitle>Chemistry Practice</CardTitle>
+                <CardTitle>Quantitative Reasoning Practice</CardTitle>
                 <CardDescription>
-                  Improve your chemistry skills with our comprehensive practice questions.
+                  Improve your Quantiative Reasoning skills with our comprehensive practice questions.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -137,8 +137,8 @@ export default function Dashboard() {
             </Card>
             <Card className="h-full hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <CardTitle>Mathematics Practice</CardTitle>
-                <CardDescription>Sharpen your mathematic skills with our extensive practice questions.</CardDescription>
+                <CardTitle> Verbal Reasoning Practice</CardTitle>
+                <CardDescription>Sharpen your Verbal Reasoning skills with our extensive practice questions.</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-col gap-4">

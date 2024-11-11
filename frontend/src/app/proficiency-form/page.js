@@ -76,60 +76,39 @@ export default function ProficiencyForm() {
           <Card className="p-8 space-y-4 w-[40%] ">
             <div className="space-y-2 text-center">
               <h1 className="text-3xl font-bold">Preliminary Proficiency Form</h1>
-              <p className="text-gray-500 dark:text-gray-400">Input your subject details to have your very own customized AI tutor to help you generate personalized practice papers.</p>
+              <p className="text-gray-500 dark:text-gray-400">Input your section details to have your very own customized AI tutor to help you generate personalized practice papers.</p>
             </div>
             <form className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
                 <Input id="name" placeholder="Enter your name" required />
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="education">Educational Level</Label>
-                <Select id="educational-level">
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select educational level"/>
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="sec1">Secondary 1</SelectItem>
-                    <SelectItem value="sec2">Secondary 2</SelectItem>
-                    <SelectItem value="sec3">Secondary 3</SelectItem>
-                    <SelectItem value="sec4">Secondary 4</SelectItem>
-                    <SelectItem value="sec5">Secondary 5</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
               <div className="space-y-2 flex flex-col">
-                <Label htmlFor="subject">Subject(s)</Label>
+                <Label htmlFor="section">Section(s)</Label>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="outline" className="text-left">Subject(s) you would like to focus in</Button>
+                    <Button variant="outline" className="text-left">Section(s) you would like to focus in</Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-56">
-                    <DropdownMenuLabel>Subject(s)</DropdownMenuLabel>
+                    <DropdownMenuLabel>Sections(s)</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuCheckboxItem
                       checked={showStatusBar}
                       onCheckedChange={setShowStatusBar}
                     >
-                      O Levels Chemistry
+                      Quantitative Reasoning
                     </DropdownMenuCheckboxItem>
                     <DropdownMenuCheckboxItem
                       checked={showActivityBar}
                       onCheckedChange={setShowActivityBar}
                     >
-                      O Levels Physics
+                      Verbal Reasoning
                     </DropdownMenuCheckboxItem>
                     <DropdownMenuCheckboxItem
                       checked={showPanel}
                       onCheckedChange={setShowPanel}
                     >
-                      O Levels Biology
-                    </DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem
-                      checked={showPanel2}
-                      onCheckedChange={setShowPanel2}
-                    >
-                      O Levels Mathematics
+                      Data Insights
                     </DropdownMenuCheckboxItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -138,7 +117,7 @@ export default function ProficiencyForm() {
                 <Label htmlFor="proficiency">Proficiency Level</Label>
                 <Select id="proficiency">
                   <SelectTrigger>
-                    <SelectValue placeholder="Select you current proficiency level" />
+                    <SelectValue placeholder="Select your current proficiency level" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="low">Low</SelectItem>
@@ -148,7 +127,7 @@ export default function ProficiencyForm() {
                 </Select>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="time">Time Allocation</Label>
+                <Label htmlFor="time">Time Allocation (Default 45 mins)</Label>
                 <Input id="time" placeholder="Enter the time you would like to spend in each practice round (in minutes)" required type="number" />
               </div>
               
