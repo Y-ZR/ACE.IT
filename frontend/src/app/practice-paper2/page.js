@@ -8,17 +8,20 @@ import { FaUser } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 
-
+// Main component for the Practice Paper page
 export default function PracticePaper2() {
   return (
     <div className="grid min-h-screen w-full grid-cols-[280px_1fr] bg-gray-100 dark:bg-gray-950">
+      {/* Sidebar */}
       <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
         <div className="flex h-full flex-col gap-2">
+          {/* Sidebar Header */}
           <div className="flex h-[60px] items-center border-b px-6">
             <Link className="flex items-center justify-center" href="/">
               <SiStudyverse className="w-5 h-5" />
               <span className="text-lg font-extrabold text-black ml-1">
-                <span className="text-[#a28231]">A</span>CE.<span className="text-[#a28231]">I</span>T
+                <span className="text-[#a28231]">A</span>CE.
+                <span className="text-[#a28231]">I</span>T
               </span>
             </Link>
             <Button className="ml-auto h-8 w-8" size="icon" variant="outline">
@@ -26,6 +29,8 @@ export default function PracticePaper2() {
               <span className="sr-only">Toggle notifications</span>
             </Button>
           </div>
+
+          {/* Sidebar Navigation */}
           <div className="flex-1 overflow-auto py-2">
             <nav className="grid items-start px-4 text-sm font-medium">
               <Link
@@ -58,11 +63,15 @@ export default function PracticePaper2() {
               </Link>
             </nav>
           </div>
+          {/* Sidebar Footer */}
           <div className="mt-auto p-4 sticky bottom-0">
             <Card>
               <CardHeader className="pb-4">
                 <CardTitle>Upgrade to Pro</CardTitle>
-                <CardDescription>Unlock all features and get unlimited iterations for each subject, and many more!</CardDescription>
+                <CardDescription>
+                  Unlock all features and get unlimited iterations for each
+                  subject, and many more!
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <Button className="w-full" size="sm">
@@ -73,14 +82,17 @@ export default function PracticePaper2() {
           </div>
         </div>
       </div>
+
+      {/* Main Content Area */}
       <div className="flex flex-col">
+        {/* Header */}
         <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
           <Link className="lg:hidden" href="#">
             <BookIcon className="h-6 w-6" />
             <span className="sr-only">Home</span>
           </Link>
           <div className="w-full flex-1">
-            <h1 className="text-lg font-semibold">O Level&apos;s Chemistry</h1>
+            <h1 className="text-lg font-semibold">Quantitative Reasoning</h1>
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -89,10 +101,7 @@ export default function PracticePaper2() {
                 size="icon"
                 variant="ghost"
               >
-                <FaUser
-                  height="40"
-                  width="40"
-                />
+                <FaUser height="40" width="40" />
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>
@@ -107,127 +116,211 @@ export default function PracticePaper2() {
           </DropdownMenu>
         </header>
 
+        {/* Main Content */}
         <main className="flex-1 p-6 md:p-8">
-          <div className="">
+          <div>
             <div className="flex flex-col rounded-lg border border-gray-200 shadow-md dark:border-gray-700">
+              {/* Practice Paper Header */}
               <header className="bg-gray-300 px-6 py-4 rounded-t-lg dark:bg-gray-800 flex justify-between items-center">
-                <h2 className="text-lg font-semibold">Chemistry Practice Paper</h2>
-                <Badge className="size-xl">
-                  Iteration 2
-                </Badge>
+                <h2 className="text-lg font-semibold">
+                  Quantitative Reasoning - Problem Solving
+                </h2>
+                <Badge className="size-xl">Iteration 2</Badge>
               </header>
+
+              {/* Questions Section */}
               <div className="flex-1 overflow-y-auto p-6 space-y-6">
+                {/* Question 1 */}
                 <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 1</h3>
-                  <p>Which of the following statements about isotopes is true?</p>
-                  <div className="mt-2 space-x-4">
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Isotopes of an element have different numbers of protons.
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Isotopes of an element have different electronic configurations
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Isotopes of an element are always radioactive.
-                    </button>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 2</h3>
-                  <p>Which type of bonding is found in the compound magnesium oxide (MgO)?</p>
-                  <div className="mt-2 space-x-4">
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                     Covalent bonding
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Ionic bonding
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Metallic bonding
-                    </button>
-                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Dipole-dipole interaction
-                    </button>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 3</h3>
+                  <h3 className="text-lg font-medium mb-2 underline">
+                    Question 1
+                  </h3>
                   <p>
-                    During electrolysis of molten lead(II) bromide, which of the following forms at the cathode?
+                    The mean and the median of seven distinct positive integers
+                    is 30. If the seven integers are such that their product is
+                    maximum, what is the product of the smallest and the largest
+                    integers?
                   </p>
                   <div className="mt-2 space-x-4">
                     <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Lead
+                      111
                     </button>
                     <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Bromine
+                      180
                     </button>
                     <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Oxygen
+                      210
                     </button>
                     <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Hydrogen
+                      891
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      900
                     </button>
                   </div>
                 </div>
+                {/* Question 2 */}
                 <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 4</h3>
+                  <h3 className="text-lg font-medium mb-2 underline">
+                    Question 2
+                  </h3>
                   <p>
-                    Which of the following is not a functional group in organic chemistry?
+                    If (x<sup>3</sup>+y<sup>6</sup>) is positive, which of the
+                    following must be true?
                   </p>
                   <div className="mt-2 space-x-4">
                     <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Ketone
+                      x is positive
                     </button>
                     <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Carboxylic acid
+                      y is positive
                     </button>
                     <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Alkene
+                      x<sup>3</sup> is negative
                     </button>
                     <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
-                      Alkane
+                      (x+y<sup>2</sup>) and (x<sup>2</sup>+y<sup>4</sup>-xy
+                      <sup>2</sup>) are either both positive or both negative
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      |x<sup>3</sup>| &lt; y<sup>6</sup>
                     </button>
                   </div>
                 </div>
+                {/* Question 3 */}
                 <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 5</h3>
+                  <h3 className="text-lg font-medium mb-2 underline">
+                    Question 3
+                  </h3>
                   <p>
-                    Choose one transition metal and discuss its physical and chemical properties, and how these properties make it suitable for two specific industrial applications.
+                    When a positive integer m is divided by another positive
+                    integer n, the remainder obtained is 8. If <sup>m</sup>
+                    &frasl;<sub>n</sub> = 89.32, what is the value of n?
+                  </p>
+                  <div className="mt-2 space-x-4">
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      1
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      25
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      32
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      100
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      2225
+                    </button>
+                  </div>
+                </div>
+                {/* Question 4 */}
+                <div>
+                  <h3 className="text-lg font-medium mb-2 underline">
+                    Question 4
+                  </h3>
+                  <p>
+                    If the value of -2k+√(4-15k) is positive, which of the
+                    following ranges represents the value of k?
+                  </p>
+                  <div className="mt-2 space-x-4">
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      −4 &lt; k &lt; <sup>1</sup>&frasl;<sub>4</sub>
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      0 &lt; k &lt; <sup>1</sup>&frasl;<sub>4</sub>
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      k &lt; <sup>1</sup>&frasl;<sub>4</sub>
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      −4 &gt; k or k &gt; <sup>1</sup>&frasl;<sub>4</sub>
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
+                      −4 &lt; k &lt; 0
+                    </button>
+                  </div>
+                </div>
+                {/* Question 5 */}
+                <div>
+                  <h3 className="text-lg font-medium mb-2 underline">
+                    Question 5
+                  </h3>
+                  <p>
+                    In a certain class, a teacher distributed a few candies and
+                    a few bars among the students such that each student got an
+                    equal number of candies and an equal number of bars and no
+                    candies or bars remained undistributed. How many students
+                    were there in the class?
+                  </p>
+                  <p>(1) The teacher distributed 180 candies and 40 bars.</p>
+                  <p>
+                    (2) The total number of items received by each student was
+                    less than 20.
+                  </p>
+                  <div className="mt-2 space-y-2">
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-left break-words">
+                      Statement (1) ALONE is sufficient, but statement (2) ALONE
+                      is not sufficient to answer the question asked.
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-left break-words">
+                      Statement (2) ALONE is sufficient, but statement (1) ALONE
+                      is not sufficient to answer the question asked.
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-left break-words">
+                      BOTH statements (1) and (2) TOGETHER are sufficient to
+                      answer the question asked, but NEITHER statement ALONE is
+                      sufficient to answer the question asked.
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-left break-words">
+                      EACH statement ALONE is sufficient to answer the question
+                      asked.
+                    </button>
+                    <button className="px-4 py-2 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-left break-words">
+                      Statements (1) and (2) TOGETHER are NOT sufficient to
+                      answer the question asked, and additional data specific to
+                      the problem are needed.
+                    </button>
+                  </div>
+
+                  {/* SAQ Question Example */}
+                  {/* <div>
+                  <h3 className="text-lg font-medium mb-2 underline">
+                    Question ?
+                  </h3>
+                  <p>
+                    Explain the process of neutralization between an acid and a
+                    base.
                   </p>
                   <div className="mt-2 space-x-4">
                     <textarea className="w-full p-2 h-24 rounded-md bg-gray-200" />
                   </div>
+                </div> */}
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium mb-2 underline">Question 6</h3>
-                  <p>
-                    Discuss the environmental impacts of using chlorine as a disinfectant for drinking water, including the chemical reactions involved in the formation of potential harmful byproducts.
-                  </p>
-                  <div className="mt-2 space-x-4">
-                    <textarea className="w-full p-2 h-24 rounded-md bg-gray-200" />
-                  </div>
-                </div>
-              </div>
-              <footer className="bg-gray-100 px-6 py-4 rounded-b-lg flex justify-between items-center dark:bg-gray-800">
-                <Button className="px-4 py-2 rounded-md text-white">
-                  <FaAngleLeft className="h-4 w-4" />
-                </Button>
-                <span className="text-sm ">Page 1 of 10</span>
-                <Link href="/analytics">
+
+                {/* Footer */}
+                <footer className="bg-gray-100 px-6 py-4 rounded-b-lg flex justify-between items-center dark:bg-gray-800">
                   <Button className="px-4 py-2 rounded-md text-white">
-                    <FaAngleRight className="h-4 w-4" />
+                    <FaAngleLeft className="h-4 w-4" />
                   </Button>
-                </Link>
-              </footer>
+                  <span className="text-sm ">Page 1 of 10</span>
+                  <Link href="/analytics">
+                    <Button className="px-4 py-2 rounded-md text-white">
+                      <FaAngleRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </footer>
+              </div>
             </div>
           </div>
         </main>
       </div>
     </div>
-  )
+  );
 }
 
+// Icon components
 function BellIcon(props) {
   return (
     <svg
@@ -248,7 +341,6 @@ function BellIcon(props) {
   )
 }
 
-
 function BookIcon(props) {
   return (
     <svg
@@ -267,7 +359,6 @@ function BookIcon(props) {
     </svg>
   )
 }
-
 
 function CalculatorIcon(props) {
   return (
@@ -297,7 +388,6 @@ function CalculatorIcon(props) {
   )
 }
 
-
 function HomeIcon(props) {
   return (
     <svg
@@ -318,7 +408,6 @@ function HomeIcon(props) {
   )
 }
 
-
 function SettingsIcon(props) {
   return (
     <svg
@@ -338,7 +427,6 @@ function SettingsIcon(props) {
     </svg>
   )
 }
-
 
 function TrophyIcon(props) {
   return (
