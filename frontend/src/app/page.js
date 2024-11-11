@@ -90,29 +90,26 @@ export default function LandingPage() {
                 <span className="font-medium">Ace It</span>
               </div>
             </div>
-            <Carousel className="rounded-xl w-[700px] h-[500px] bg-white shadow-lg relative z-0">
+            <Carousel className="rounded-xl w-[700px] h-[44 0px] bg-white shadow-lg relative z-0">
               <CarouselContent>
                 <CarouselItem>
                   <header className="bg-black px-6 py-4 rounded-t-lg text-left text-white">
                     <h2 className="text-lg font-semibold">GMAT Quantitative Reasoning Practice Questions</h2>
                   </header>
                   <div className="p-5 space-y-10 text-left">
-                    <span className="font-bold text-2xl underline">
+                    <span className="font-bold text-xl underline">
                       Problem Solving
                     </span>
-                    <p className="font-semibold text-2xl flex items-center">
+                    <p className="font-semibold text-xl flex items-center">
                       Company X sold 1,500 units of its product for $9 each and 750 units for $6 each. 
                       If the company&apos;s cost of producing each unit of the product was $7, what was the company&apos;s profit or loss on the sale of 2,250 units?
                     </p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
                       <Button className="px-4 py-2 rounded-md">
                         $2250 loss
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
                         $750 loss
-                      </Button>
-                      <Button className="px-4 py-2 rounded-md">
-                        No profit or loss
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
                         $2250 profit
@@ -129,14 +126,14 @@ export default function LandingPage() {
                     <h2 className="text-lg font-semibold">GMAT Quantitative Reasoning Practice Questions</h2>
                   </header>
                   <div className="p-5 space-y-10 text-left">
-                    <span className="font-bold text-2xl underline">
+                    <span className="font-bold text-xl underline">
                       Problem Solving
                     </span>
-                    <p className="font-semibold text-2xl flex items-start">
+                    <p className="font-semibold text-xl flex items-start">
                       A box contains 20 balls, of which 12 are red and 8 are blue. If two balls are to be drawn from this box at random without replacement,
                       what is the probability that one ball will be red and the other will be blue?
                     </p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
                       <Button className="px-4 py-2 rounded-md">
                         1/96
                       </Button>
@@ -149,9 +146,6 @@ export default function LandingPage() {
                       <Button className="px-4 py-2 rounded-md">
                         48/95
                       </Button>
-                      <Button className="px-4 py-2 rounded-md">
-                        1
-                      </Button>
                     </div>
                   </div>  
                 </CarouselItem>
@@ -161,12 +155,14 @@ export default function LandingPage() {
                     <h2 className="text-lg font-semibold">GMAT Verbal Reasoning Practice Questions</h2>
                   </header>
                   <div className="p-5 space-y-10 text-left">
-                    <span className="font-bold text-2xl underline">
+                    <span className="font-bold text-xl underline">
                       Sentence Correction
                     </span>
-                    <p className="font-semibold text-2xl flex items-start">
-                      It was found that camels, in contrast to horses&apos;, are not easily spooked by gunfire or shell detonations which,
-                      together with their hardiness, made them ideal for desert warfare.
+                    <p className="font-semibold text-xl flex items-start">
+                      It was found that camels, ________________,
+                      are not easily spooked by gunfire or shell detonations which,
+                      together with their hardiness, made them ideal for desert warfare
+                      in the Middle East during modern warfare.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                       <Button className="px-4 py-2 rounded-md">
@@ -180,9 +176,6 @@ export default function LandingPage() {
                       </Button>
                       <Button className="px-4 py-2 rounded-md">
                         unlike in case of horses
-                      </Button>
-                      <Button className="px-4 py-2 rounded-md">
-                        opposed to horses,
                       </Button>
                     </div>
                   </div>  
