@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
@@ -7,8 +9,19 @@ import { SiStudyverse } from "react-icons/si";
 import { FaUser } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 export default function PracticePaper2() {
+  const [timeLeft, setTimeLeft] = useState(3600);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="grid min-h-screen w-full grid-cols-[280px_1fr] bg-gray-100 dark:bg-gray-950">
       {/* Sidebar */}
@@ -85,10 +98,22 @@ export default function PracticePaper2() {
       {/* Main Content Area */}
       <div className="flex flex-col">
         {/* Header */}
-        <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
-          <div className="w-full flex-1">
-            <h1 className="text-lg font-semibold">Quantitative Reasoning</h1>
+        <header className="flex h-14 lg:h-[60px] items-center justify-between border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
+          <h1 className="text-lg font-semibold">Quantitative Reasoning</h1>
+
+          {/* Timer Display */}
+          <div className="flex-1 flex justify-center">
+            <div className="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full shadow-md flex items-center gap-2 w-45 justify-center">
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                Time Left:
+              </span>
+              <span className="text-lg font-bold text-gray-900 dark:text-white">
+                {Math.floor(timeLeft / 60)}:
+                {(timeLeft % 60).toString().padStart(2, "0")}
+              </span>
+            </div>
           </div>
+
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
