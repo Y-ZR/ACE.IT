@@ -1,13 +1,57 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { CardTitle, CardDescription, CardHeader, CardContent, Card } from "@/components/ui/card"
-import { DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem, DropdownMenuContent, DropdownMenu } from "@/components/ui/dropdown-menu"
-import { Badge } from "@/components/ui/badge"
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  CardTitle,
+  CardDescription,
+  CardHeader,
+  CardContent,
+  Card,
+} from "@/components/ui/card";
+import {
+  DropdownMenuTrigger,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuItem,
+  DropdownMenuContent,
+  DropdownMenu,
+} from "@/components/ui/dropdown-menu";
+import { Badge } from "@/components/ui/badge";
 import { SiStudyverse } from "react-icons/si";
 import { FaUser } from "react-icons/fa";
-import { Progress } from "@/components/ui/progress"
+import { FaRegShareSquare } from "react-icons/fa";
+import { RiAiGenerate } from "react-icons/ri";
+import { Progress } from "@/components/ui/progress";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+import GMATResults from "@/app/analytics/components/gmat-results";
 
 export default function Analytics() {
+  const [buttonStates, setButtonStates] = useState({
+    twitter: false,
+    linkedin: false,
+    facebook: false,
+  });
+
+  // Toggle function for each button
+  const toggleButton = (buttonName) => {
+    setButtonStates((prevState) => ({
+      ...prevState,
+      [buttonName]: !prevState[buttonName],
+    }));
+  };
+
   return (
     <div className="grid min-h-screen w-full grid-cols-[280px_1fr] bg-gray-100 dark:bg-gray-950">
       {/* Sidebar */}
@@ -122,10 +166,10 @@ export default function Analytics() {
               <div className="flex items-center justify-between w-full mb-8">
                 <div className="flex flex-col items-start">
                   <span className="text-gray-500 dark:text-gray-400 text-sm">
-                    Overall Score
+                    Overall GMAT Score
                   </span>
                   <span className="text-4xl font-bold text-primary-500">
-                    76%
+                    760
                   </span>
                 </div>
                 <Button variant="primary">Review Feedback</Button>
@@ -234,13 +278,74 @@ export default function Analytics() {
 
               {/* Navigation Buttons */}
               <div className="w-full flex justify-between items-center">
-                <Link href="/dashboard">
-                  <Button className="mt-8">
-                    <HomeIcon className="w-5 h-5 mr-2" /> Back to Dashboard
-                  </Button>
-                </Link>
+                <div className="flex gap-2">
+                  <Link href="/dashboard">
+                    <Button className="mt-8">
+                      <HomeIcon className="w-5 h-5 mr-2" /> Back to Dashboard
+                    </Button>
+                  </Link>
+
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button className="mt-8">
+                        <FaRegShareSquare className="w-5 h-5 mr-2" /> Share
+                        Results
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-fit">
+                      <DialogHeader>
+                        <DialogTitle>Share your results</DialogTitle>
+                        <DialogDescription>
+                          Share your results with your friends and colleagues on
+                          different platforms.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid gap-4 py-4">
+                        <GMATResults score={760} />
+                        <div className="flex justify-center space-x-4 w-full">
+                          <Button
+                            variant={buttonStates.twitter ? "" : "outline"}
+                            className="w-full"
+                            onClick={() => toggleButton("twitter")}
+                          >
+                            <FaTwitter className="w-5 h-5 mr-2" /> Twitter
+                          </Button>
+                          <Button
+                            variant={buttonStates.linkedin ? "" : "outline"}
+                            className="w-full"
+                            onClick={() => toggleButton("linkedin")}
+                          >
+                            <FaLinkedin className="w-5 h-5 mr-2" /> LinkedIn
+                          </Button>
+                          <Button
+                            variant={buttonStates.facebook ? "" : "outline"}
+                            className="w-full"
+                            onClick={() => toggleButton("facebook")}
+                          >
+                            <FaFacebook className="w-5 h-5 mr-2" /> Facebook
+                          </Button>
+                        </div>
+                      </div>
+                      <DialogFooter className="relative">
+                        <DialogClose>
+                          <Button
+                            type="button"
+                            variant="secondary"
+                            className="absolute left-0 bottom-0"
+                          >
+                            Close
+                          </Button>
+                        </DialogClose>
+                        <Button type="submit">Share</Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+
                 <Link href="/practice-paper2">
-                  <Button className="mt-8">Generate New Paper</Button>
+                  <Button className="mt-8">
+                    <RiAiGenerate className="w-5 h-5 mr-2" /> Generate New Paper
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -269,7 +374,7 @@ function BellIcon(props) {
       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
       <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
     </svg>
-  )
+  );
 }
 
 function BookIcon(props) {
@@ -288,7 +393,7 @@ function BookIcon(props) {
     >
       <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
     </svg>
-  )
+  );
 }
 
 function CalculatorIcon(props) {
@@ -316,7 +421,7 @@ function CalculatorIcon(props) {
       <path d="M12 18h.01" />
       <path d="M8 18h.01" />
     </svg>
-  )
+  );
 }
 
 function HomeIcon(props) {
@@ -336,7 +441,7 @@ function HomeIcon(props) {
       <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
       <polyline points="9 22 9 12 15 12 15 22" />
     </svg>
-  )
+  );
 }
 
 function SettingsIcon(props) {
@@ -356,7 +461,7 @@ function SettingsIcon(props) {
       <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
       <circle cx="12" cy="12" r="3" />
     </svg>
-  )
+  );
 }
 
 function TrophyIcon(props) {
@@ -380,7 +485,7 @@ function TrophyIcon(props) {
       <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
       <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
     </svg>
-  )
+  );
 }
 
 function CheckIcon(props) {
@@ -399,7 +504,7 @@ function CheckIcon(props) {
     >
       <path d="M20 6 9 17l-5-5" />
     </svg>
-  )
+  );
 }
 
 function XIcon(props) {
@@ -419,5 +524,5 @@ function XIcon(props) {
       <path d="M18 6L6 18" />
       <path d="M6 6l12 12" />
     </svg>
-  )
+  );
 }
